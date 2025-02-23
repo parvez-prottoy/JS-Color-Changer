@@ -9,7 +9,7 @@
   <body>
     <header class="shadow-lg bg-white">
       <div
-        class="max-w-screen-lg mx-auto flex justify-between items-center p-4"
+        class="max-w-screen-lg mx-auto flex justify-between items-center p-4 h-16"
       >
         <h3 class="text-2xl font-bold">Color Changer</h3>
         <nav>
@@ -23,9 +23,58 @@
             <li>
               <a href="rgb.html" class="text-blue-500">Rgb</a>
             </li>
+            <li class="">
+              <label
+                for="Toggle1"
+                class="inline-flex items-center cursor-pointer dark:text-gray-800"
+              >
+                <span class="relative">
+                  <input id="Toggle1" type="checkbox" class="hidden peer" />
+                  <div
+                    class="w-10 h-6 rounded-full shadow-inner dark:bg-gray-600 peer-checked:dark:bg-violet-600"
+                  ></div>
+                  <div
+                    class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-100"
+                  ></div>
+                </span>
+              </label>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
+    <main>
+      <section
+        class="bg-gradient-to-r from-violet-500 to-fuchsia-500 h-[calc(100vh-4rem)] flex items-center justify-center"
+      >
+        <div
+          class="max-w-screen-lg w-[95%] md:w-10/12 lg:w-1/2 mx-auto p-6 bg-white rounded-lg shadow-lg"
+        >
+          <div
+            style="transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1)"
+            class="h-32 bg-gray-200 rounded-lg flex justify-center items-center"
+            id="color"
+          >
+            <p class="text-xl font-medium">color code</p>
+          </div>
+          <div class="mt-4 flex justify-center space-x-4">
+            <button
+              class="bg-black/80 text-white px-4 py-2 rounded-lg"
+              id="btn-generate"
+            >
+              Generate Color
+            </button>
+            <button
+              class="bg-gray-400 text-white px-4 py-2 rounded-lg"
+              id="btn-copy"
+            >
+              Copy Color
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- js -->
+    <script src="src/js/simple.js"></script>
   </body>
 </html>
