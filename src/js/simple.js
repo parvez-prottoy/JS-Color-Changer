@@ -148,7 +148,7 @@ const copyBtn = document.querySelector("#btn-copy");
 colorBox.style.backgroundColor = colors[0];
 colorText.textContent = colors[0];
 generateBtn.addEventListener("click", function () {
-  copyBtn.textContent = "Copy to Clipboard";
+  copyBtn.textContent = "Copy Color";
   const randomColor = generateRandomColor();
   colorBox.style.backgroundColor = randomColor;
   colorText.textContent = randomColor;
